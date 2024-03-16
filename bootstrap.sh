@@ -19,7 +19,7 @@ rm .profile
 sed -i 's/halcyon/'$(whoami)'/g' .config/home-manager/home.nix
 sed -i 's/halcyon/'$(whoami)'/g' .config/home-manager/flake.nix
 nix shell home-manager -c home-manager switch
-. ~/.profile 
-git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
+echo "installing astrovim 🌝"
+nix-shell -p git --command "git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim"
 mkdir -p ~/.config/nvim/lua/user/
 cp ~/.config/home-manager/nvim/* ~/.config/nvim/lua/user/
