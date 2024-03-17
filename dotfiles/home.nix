@@ -13,6 +13,8 @@
     pkgs.zoxide
     pkgs.bat
     pkgs.lsd
+    pkgs.julia_18-bin
+    pkgs.duckdb
   ];
 
   home.file = {
