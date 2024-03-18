@@ -21,7 +21,7 @@ USER $username
 ENV USER=$username
 
 WORKDIR /home/$username
-COPY --chown=$username bootstrap.sh .
-COPY --chown=$username dotfiles/ /home/$username/.config/home-manager/
+COPY --chmod=0777 bootstrap.sh .
+COPY --chmod=0777 dotfiles/ /home/$username/.config/home-manager/
 
 
